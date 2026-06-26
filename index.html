@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>اختبار SHRM التحضيري</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="home" class="wrap"><section class="hero"><span class="badge">SHRM Practice Exam</span><span class="badge" id="bankCount">تحميل الأسئلة...</span><h1>اختبار SHRM التحضيري</h1><p>مدة الاختبار 60 دقيقة، مع تسليم مبكر، تصحيح فوري، خلط الأسئلة والخيارات، وزر معرفة الإجابة داخل كل سؤال.</p><div class="stats"><div class="stat"><b>60</b>دقيقة</div><div class="stat"><b id="totalHome">100</b>سؤال</div><div class="stat"><b>خلط</b>تلقائي</div><div class="stat"><b>فوري</b>تصحيح</div></div><button class="pri" id="startBtn" onclick="start()" disabled>جاري التحميل...</button></section></div>
+<div id="exam" class="hidden"><div class="top"><div class="topin"><div class="timer" id="timer">60:00</div><div class="prog"><span id="prog"></span></div><button class="dan" onclick="confirmSubmit()">تسليم الاختبار</button></div></div><div class="wrap layout"><main class="card"><div class="qhead"><span class="qnum" id="qnum"></span><span class="small" id="cnt"></span></div><div class="q" id="q"></div><div id="opts"></div><div id="ansbox" class="ansbox"></div><div class="nav"><button class="sec" onclick="prev()">السابق</button><button class="ghost" onclick="showAns()">معرفة الإجابة</button><button class="sec" onclick="next()">التالي</button></div></main><aside class="card"><h3>خريطة الأسئلة</h3><div class="pal" id="pal"></div><p class="small">الأخضر = تمت الإجابة، الأزرق = السؤال الحالي.</p></aside></div></div>
+<div id="result" class="wrap hidden"><section class="hero"><h2 style="text-align:center">نتيجة الاختبار</h2><div class="score" id="score"></div><p id="scoreTxt" style="text-align:center"></p><div class="nav" style="justify-content:center"><button class="pri" onclick="start()">إعادة الاختبار</button><button class="sec" onclick="showReview()">مراجعة الإجابات</button></div></section><section id="review" class="card hidden" style="margin-top:16px"><h2>مراجعة الاختبار</h2><div id="revlist"></div></section></div>
+<script src="app.js"></script>
+</body>
+</html>
